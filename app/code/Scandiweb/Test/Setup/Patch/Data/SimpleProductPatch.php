@@ -11,6 +11,7 @@ use Magento\InventoryApi\Api\Data\SourceItemInterface;
 use Magento\InventoryApi\Api\SourceItemsSaveInterface;
 use Magento\Catalog\Model\CategoryFactory;
 use Magento\Catalog\Api\CategoryRepositoryInterface;
+use Magento\Catalog\Api\CategoryLinkManagementInterface;
 
 class SimpleProductPatch implements DataPatchInterface
 {
