@@ -55,6 +55,11 @@ class SimpleProductPatch implements DataPatchInterface
     protected CategoryRepositoryInterface $categoryRepository;
 
     /**
+     * @var CategoryLinkManagementInterface
+     */
+    protected CategoryLinkManagementInterface $categoryLink;
+
+    /**
      * @var array
      */
     protected array $sourceItems = [];
@@ -79,7 +84,8 @@ class SimpleProductPatch implements DataPatchInterface
         SourceItemInterfaceFactory $sourceItemFactory,
         SourceItemsSaveInterface $sourceItemsSaveInterface,
         CategoryFactory $categoryFactory,
-        CategoryRepositoryInterface $categoryRepository
+        CategoryRepositoryInterface $categoryRepository,
+        CategoryLinkManagementInterface $categoryLink
     ) {
         $this->appState = $appState;
         $this->productInterfaceFactory = $productInterfaceFactory;
@@ -89,6 +95,7 @@ class SimpleProductPatch implements DataPatchInterface
         $this->sourceItemsSaveInterface = $sourceItemsSaveInterface;
         $this->categoryFactory = $categoryFactory;
         $this->categoryRepository = $categoryRepository;
+        $this->categoryLink = $categoryLink;
     }
 
     /**
